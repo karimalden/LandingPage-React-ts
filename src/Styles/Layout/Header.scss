@@ -1,0 +1,218 @@
+.Header {
+    border-top: 1px solid var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg);
+    color: var(--primary);
+    height: 60px;
+    padding-inline: 8vw;
+    border-bottom: 1px solid var(--gray);
+    z-index: 5;
+
+    h1 {
+        font-size: 2vw;
+        margin-bottom: 0;
+        cursor: pointer;
+        @include Hover_outline_characters;
+        // @include underLineText(var(--primary),var(--secondary))
+    }
+
+    nav {
+        @include Flex;
+    z-index: 5;
+
+        .Links {
+            margin-bottom: 0;
+            @include Flex;
+            gap: 2vw;
+
+            svg {
+                height: 45px;
+                cursor: pointer;
+
+            }
+
+            li {
+                all: unset;
+                @include underLineText(var(--primary), var(--secondary));
+                cursor: pointer;
+                padding-bottom: 1px;
+                opacity: .6;
+
+                &:has(.active) {
+                    color: var(--secondary);
+                    opacity: 1 !important;
+
+                }
+
+                &:last-child {
+                    border: 1px solid var(--primary);
+                    padding: 3px 15px;
+                    border-radius: 4px;
+                    opacity: 1;
+                    background-image : none !important
+                }
+
+            }
+        }
+    }
+
+}
+
+.Translate,
+.Theme {
+    li {
+        list-style: none;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    img {
+        margin-inline: 6px;
+        display: inline !important;
+    }
+}
+
+.Header {
+    .ant-btn-default {
+        all: unset;
+    }
+
+    .ant-space-gap-col-small .ant-space-item .ant-dropdown-open {
+        background-color: var(--primary);
+        color: var(--vg);
+        border-width: 0px;
+
+        @include Hover;
+
+
+    }
+
+    /* List */
+    .ant-dropdown-placement-bottom ul {
+        background-color: var(--bg) !important;
+        color: var(--primary);
+
+        svg {
+            margin-inline: 5px;
+        }
+    }
+
+    /* List Item */
+    .ant-dropdown-menu li {
+        color: var(--primary) !important;
+    }
+
+    :where(.css-dev-only-do-not-override-1adbn6x).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+        color: var(--secondary);
+        border-color: var(--secondary);
+    }
+
+    .MenuChange {
+
+        svg,
+        img {
+            margin-inline: 5px;
+        }
+    }
+
+    .Menu_Group {
+        @include Flex;
+        gap: 20px;
+    }
+
+
+
+    .NavMenus .ant-space-item span {
+        color: var(--text);
+    }
+
+    /* Svg */
+    .MidBar_Right a svg {
+        color: var(--text);
+    }
+
+    /* Svg */
+    .MidBar_Right .ViewCart svg {
+        color: var(--text);
+    }
+
+    /* Special property */
+    .special_properties .Towspecial_property .special_property {
+        color: var(--text);
+    }
+}
+
+.MenuNav {
+    display: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    .MenuNav {
+        display: block;
+    }
+
+    .Links {
+        display: none !important;
+    }
+
+    .Header {
+
+        h1 {
+            font-size: 6vw;
+        }
+    }
+}
+
+
+
+ .DrawerLinks {
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
+
+
+            svg {
+                height: 45px;
+                cursor: pointer;
+
+            }
+
+            ul{
+                padding-left: 0 !important;
+            }
+            li {
+                all: unset;
+                @include underLineText(var(--primary), var(--secondary));
+                cursor: pointer;
+                padding-bottom: 1px;
+                opacity: .6;
+                font-size: 20px;
+                                padding-left: 0 !important;
+
+                a{
+                    &:hover{
+                    color: var(--secondary) !important;
+                    font-weight: bold;
+                }
+                }
+
+                &:has(.active) {
+                    color: var(--secondary);
+                    opacity: 1 !important;
+
+                }
+
+
+            }
+        }
